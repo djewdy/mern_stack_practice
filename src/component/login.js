@@ -1,6 +1,7 @@
 import React from "react";
 import "./Login.css"; // Link to the CSS file
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import React, { useState } from "react";
 //import here the useState
 const Login = () => {
   //here u declare the states as an expl
