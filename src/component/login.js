@@ -5,16 +5,15 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const Login = () => {
   //here u declare the states as an expl
   // const [email,setEmail] = useState("")
+  const [username ,setUsername] = useState("");
 
   //function to handle the submition of the the form
 
-  /*
   const handleSubmit = (e) =>{
     e.preventDefault()
-
-    console.log(email)
+    console.log(username)
     }
-  */
+  
   return (
     <div className="login-container">
       <div className="login-box">
@@ -33,6 +32,7 @@ const Login = () => {
               placeholder="USERNAME"
               required
               className="input-field"
+              onChange={(e)=>setUsername(e.target.value)}
             />
             {/* <input
               type="text"
