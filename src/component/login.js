@@ -1,8 +1,20 @@
 import React from "react";
 import "./Login.css"; // Link to the CSS file
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
+//import here the useState
 const Login = () => {
+  //here u declare the states as an expl
+  // const [email,setEmail] = useState("")
+
+  //function to handle the submition of the the form
+
+  /*
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+
+    console.log(email)
+    }
+  */
   return (
     <div className="login-container">
       <div className="login-box">
@@ -22,6 +34,14 @@ const Login = () => {
               required
               className="input-field"
             />
+            {/* <input
+              type="text"
+              placeholder="email"
+              required
+              className="input-field"
+              // u add onChange to set the email value to the state
+              onChange={(e)=>setEmail(e.target.value)}
+            /> */}
           </div>
           <div className="input-container">
             <i className="fa fa-lock icon"></i>
@@ -33,15 +53,27 @@ const Login = () => {
             />
           </div>
           <div className="form-footer">
-            
             <p>
               Don’t have an account? <a href="/register">Register</a>
             </p>
-            <button type="submit" className="btn">Login</button>
+            <button
+              onSubmit={(e) => {
+                handleSubmit(e);
+              }}
+              type="submit"
+              className="btn"
+            >
+              Login
+            </button>
+            {/* this one to call the function when u submit the form use onSubmit */}
+            {/* <button onSubmit={(e)=>{handleSubmit(e)}} type="submit" className="btn">
+              Login
+            </button> */}
           </div>
         </form>
       </div>
     </div>
+    // YALAAA GOOD LUCK
   );
 };
 
